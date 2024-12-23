@@ -1,0 +1,149 @@
+/* Animación de fondo con degradado */
+@keyframes gradientAnimation {
+  0% {
+      background-color: #fa6969; /* Rojo */
+  }
+  14% {
+      background-color: #ffcc70; /* Amarillo */
+  }
+  28% {
+      background-color: #69fa69; /* Verde */
+  }
+  42% {
+      background-color: #70c4ff; /* Azul */
+  }
+  57% {
+      background-color: #fa69e0; /* Rosa */
+  }
+  71% {
+      background-color: #c069fa; /* Púrpura */
+  }
+  85% {
+      background-color: #f0e68c; /* Amarillo claro */
+  }
+  100% {
+      background-color: #ff6978; /* Coral */
+  }
+}
+
+
+/* Estilos para el cuerpo de la página */
+body {
+  animation: gradientAnimation 10s ease infinite; /* Animación de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; /* Fuente moderna */
+}
+
+/* Estilos para el contenedor por defecto (vista de escritorio) */
+.container {
+  padding: 100px; /* Aumentar el padding interno */
+  max-width: 850px; /* Tamaño del contenedor ajustado */
+  max-height: 1200px; /* Altura del contenedor ajustada */
+  border: 1px solid #ccc;
+  border-radius: 16px; /* Bordes más suaves */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más suave y pronunciada */
+  background-color: #ffffff; /* Fondo blanco */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s; /* Animación suave */
+}
+
+.container:hover {
+  transform: scale(1.02); /* Efecto de ligera ampliación al pasar el mouse */
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 15px; /* Espaciado adicional entre los botones */
+}
+
+/* Estilos generales para los botones */
+button {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 16px; /* Bordes más redondeados */
+  color: #000;
+  font-size: 16px;
+  padding: 12px 24px; /* Más padding para un botón más grande */
+  cursor: pointer;
+  min-width: 200px; /* Ancho mínimo, pero el botón puede crecer si el texto lo requiere */
+  height: auto; /* La altura se ajusta automáticamente según el contenido */
+  white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+/* Botón de ayuda con un tamaño distinto */
+button.ayuda {
+  width: 150px; /* Tamaño distinto para el botón de Ayuda */
+  height: 40px; /* Altura distinta para el botón de Ayuda */
+}
+
+/* Sombra y cambio de color en hover */
+button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Más sombra en hover */
+  transform: translateY(-2px); /* Efecto de flotación */
+}
+
+/* Efecto al hacer clic */
+button:active {
+  transform: translateY(0); /* Vuelve a su lugar al ser clickeado */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+}
+
+/* Estilos para el encabezado */
+h3 {
+  text-align: center;
+  font-size: 36px; /* Tamaño grande para el título */
+  color: #333; /* Un tono más oscuro para mejor contraste */
+  margin-bottom: 30px; /* Más espacio debajo del título */
+  font-weight: bold; /* Título más llamativo */
+  text-transform: uppercase; /* Mayúsculas */
+  letter-spacing: 1.5px; /* Espaciado entre letras */
+}
+
+/* Estilos para el contenedor de log */
+.log-container {
+  max-height: 150px; /* Limita la altura a 150px o ajusta según necesites */
+  width: 100%; /* Haz que el contenedor ocupe todo el ancho disponible */
+  overflow-y: auto; /* Habilita la barra de desplazamiento vertical */
+  border: 1px solid #ddd; /* Borde del contenedor */
+  padding: 10px;
+  background-color: #f9f9f9; /* Fondo del log */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el log */
+}
+
+/* Estilos para las líneas del log */
+.log-lines {
+  list-style-type: none; /* Elimina los bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.log-lines li {
+  margin-bottom: 5px; /* Espacio entre las líneas */
+  font-size: 14px; /* Tamaño del texto */
+  font-family: monospace; /* Fuente estilo terminal para el log */
+  color: #555; /* Color suave para el texto del log */
+}
+
+/* Efecto sutil de hover en las líneas del log */
+.log-lines li:hover {
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
