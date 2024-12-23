@@ -1,4 +1,3 @@
-1. README ACTUALIZADO
 Casa Domótica Controlada a través de Página Web
 Breve descripción:
 Este proyecto es un sistema de automatización doméstica basado en una Raspberry Pi 3 B+ y un ESP8266, que permite el control remoto de dispositivos eléctricos, la monitorización de temperatura/humedad con un sensor AHT10, control de ingreso con RFID, luces exteriores automáticas y cierre automático de garaje. El sistema está compuesto por un frontend web desarrollado en React y un backend construido con Flask (Python), el cual se comunica con los pines GPIO de la Raspberry Pi para controlar distintos dispositivos, como módulos de relé, un sensor AHT10 para medir temperatura/humedad, el ESP8266 para ampliar el control de luces exteriores y un sensor ultrasónico, tarjetas RFID y servomotores.
